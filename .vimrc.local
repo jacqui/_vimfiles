@@ -1,0 +1,6 @@
+iabbrev rdebug require 'ruby-debug'; Debugger.start; Debugger.settings[:autoeval] = 1; Debugger.settings[:autolist] = 1; debugger
+nmap <silent> <Leader>t :!ctags -R --languages=Ruby,C,C++ --langmap='ruby:+.rake.builder.haml'<CR>
+set nu
+nmap <silent> <leader>h :%s/require 'test_helper'/require File.expand_path(File.dirname(__FILE__) + "\/..\/test_helper")/g
+"autocmd FileType ruby :%s/\s\+$//g
+:set clipboard=exclude:.*
